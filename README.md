@@ -56,7 +56,10 @@
 
     python nominate.py --duedate=2017-12-05 commentors 1542798332469989 EAACEdEose0cBAAlGZBDoqfEMYTmzlsW7mJdzaSJMXdYFIQcjTpBZCafrB1nYMKjthoks7vNjj7K9mVk6BOrDfr2ObcZCfROzZC8k4DHipJG0WSdKTL403Bo1CAZBmxUI7465haf4VXdy3K2LPccniFLQtwVtvQbg8ScdhshqvyfA0Sy1WkHK9MZBcUl6DlNumoEhZBhkSZCQEAZDZD
 
-팁: 출력 결과를 파일로 저장하고자 한다면 리디렉션(``> filename``)을 활용하라.
+
+### 팁
+
+출력 결과를 파일로 저장하고자 한다면 bash의 리디렉션(``> filename``) 기능을 활용하라.
 
 
 ## 추첨기 모듈 (choose.py)

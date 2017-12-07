@@ -1,4 +1,4 @@
-페이스북 좋아요 / 댓글 추첨기 (facebook-roullete)
+페이스북 좋아요 / 댓글 추첨기 (facebook-roulette)
 ========
 
 ## 개요

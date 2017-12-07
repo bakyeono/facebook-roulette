@@ -16,14 +16,25 @@ def parse_args():
     return args
 
 
-def read_candidates(filename):
+def read_candidates(filename, encoding='UTF-8'):
     """파일에서 후보군을 읽어들인다."""
     try:
-        with open(filename) as f:
+        with open(filename, 'r', encoding=encoding) as f:
             data = f.readlines()
+
     except OSError:
-        print('[ERROR] Can\'t read file: {filename}', file=stderr)
+        print(f'[ERROR] Can\'t read file: {filename}', file=stderr)
         data = []
+
+    except UnicodeDecodeError as e:
+        if encoding == 'UTF-8':
+            print(f'[WARN] File encoding is not UTF-8: {filename}', file=stderr)
+            data = read_candidates(filename, 'MS949')
+        else:
+            print('[ERROR] Can\'t decode file as UTF-8|MS949', file=stderr)
+            print(str(e), file=stderr)
+            data = []
+
     return data
 
 
@@ -31,9 +42,11 @@ def choose(candidates, n):
     """후보군에서 n개를 임의로 선택해 반환한다."""
     try:
         winners = random.sample(candidates, n)
+
     except ValueError as e:
         print(str(e), file=stderr)
         exit(-1)
+
     return winners
 
 

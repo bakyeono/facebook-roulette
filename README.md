@@ -52,7 +52,7 @@
 
     python nominate.py likers 1542798332469989 EAACEdEose0cBAAlGZBDoqfEMYTmzlsW7mJdzaSJMXdYFIQcjTpBZCafrB1nYMKjthoks7vNjj7K9mVk6BOrDfr2ObcZCfROzZC8k4DHipJG0WSdKTL403Bo1CAZBmxUI7465haf4VXdy3K2LPccniFLQtwVtvQbg8ScdhshqvyfA0Sy1WkHK9MZBcUl6DlNumoEhZBhkSZCQEAZDZD
 
-2017년 12월 5일 이전에 댓글 단 사람 추출:
+2017년 12월 5일이 되기 전 댓글 단 사람 추출:
 
     python nominate.py --duedate=2017-12-05 commentors 1542798332469989 EAACEdEose0cBAAlGZBDoqfEMYTmzlsW7mJdzaSJMXdYFIQcjTpBZCafrB1nYMKjthoks7vNjj7K9mVk6BOrDfr2ObcZCfROzZC8k4DHipJG0WSdKTL403Bo1CAZBmxUI7465haf4VXdy3K2LPccniFLQtwVtvQbg8ScdhshqvyfA0Sy1WkHK9MZBcUl6DlNumoEhZBhkSZCQEAZDZD
 

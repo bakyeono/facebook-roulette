@@ -9,18 +9,22 @@
 
 ## 준비물
 
-* 파이썬 3.6 이상 (+ ``requests`` 모듈)
+* 파이썬 3.6 이상 (+ requests 모듈)
 * 페이스북 개발자 계정: <https://developers.facebook.com>
-* 페이스북 그래프 API 토큰: 페이스북 그래프 API 탐색기(<https://developers.facebook.com>)에서 발급
+* 페이스북 그래프 API 토큰: 페이스북 그래프 API 탐색기(<https://developers.facebook.com/tools/explorer>)에서 발급
 * 대상 포스트의 ID: 포스트에서 업로드 시간의 링크를 살펴보면, ``https://www.facebook.com/groups/pythonkorea/permalink/1542798332469989/`` 형식으로 되어 있다. 여기서 ``1542798332469989``에 대응하는 번호가 포스트의 ID다.
 
 
-## 주의사항 및 이슈
+## 주의사항
 
-* 토큰의 유효시간은 수 시간 내에 만료된다. 시간이 지나면 새로 발급해야 한다.
-* 게시물의 좋아요 정보에서는 사용자의 ID를 구할 수 없다. 그 때문에 동명이인을 서로 구별하지 못한다.
-* 게시물의 좋아요 정보에서는 생성일을 구할 수 없다. 그 때문에 마감일에 의한 걸러내기가 불가하다.
-* 앱 사용 권한 문제로 인해, 게시물을 공유한 사람은 API를 이용해 구하는 것이 현실적으로 불가능하다. (관련 정보: <https://developers.facebook.com/bugs/1404733043148335/>) 만약, 포스트 공유자 중에서 추첨하고자 한다면 손으로 직접 공유자를 추려내야 할 것이다.
+* 토큰은 발급후 수 분 내에 만료된다. 유효시간이 지나면 새로 발급해야 한다.
+* 발급된 토큰은 대상 포스트에 접근할 권한이 있어야 한다.
+
+
+## 이슈
+
+* 게시물의 "좋아요" 정보는 제공되는 필드가 제한적이다. 예컨대, 사용자의 ID를 구할 수 없어 동명이인을 서로 구별하지 못한다. 또한, "좋아요" 한 날을 구할 수 없어, 마감일에 의한 걸러내기가 불가하다. 단, 댓글 정보에서는 이런 문제가 없다.
+* 앱 사용 권한 문제로 인해, 게시물을 공유한 사람은 API를 이용해 구하는 것이 현실적으로 어렵다. (관련 정보: <https://developers.facebook.com/bugs/1404733043148335/>) 만약, 포스트 공유자 중에서 추첨하고자 한다면 페이스북 사이트에서 당신의 눈과 손으로 직접 공유자를 추출해야 할 가능성이 높다. 건투를 빈다.
 
 
 ## 후보 추출기 사용법 (nominate.py)
@@ -46,7 +50,7 @@
 
     python nominate.py --duedate=2017-12-05 commentors 1542798332469989 EAACEdEose0cBAAlGZBDoqfEMYTmzlsW7mJdzaSJMXdYFIQcjTpBZCafrB1nYMKjthoks7vNjj7K9mVk6BOrDfr2ObcZCfROzZC8k4DHipJG0WSdKTL403Bo1CAZBmxUI7465haf4VXdy3K2LPccniFLQtwVtvQbg8ScdhshqvyfA0Sy1WkHK9MZBcUl6DlNumoEhZBhkSZCQEAZDZD
 
-출력 결과를 파일로 저장하고자 한다면 리디렉션(``> filename``)을 활용하라.
+팁: 출력 결과를 파일로 저장하고자 한다면 리디렉션(``> filename``)을 활용하라.
 
 
 ## 추첨기 사용법 (choose.py)

@@ -84,7 +84,8 @@ def parse_args():
     parser.add_argument(dest='edge', help='likers or commentors')
     parser.add_argument(dest='post_id', help='target post ID')
     parser.add_argument(dest='token', help='access token for API')
-    parser.add_argument('--duedate', dest='duedate', help='example: 2017-12-05')
+    parser.add_argument('--duedate', dest='duedate', metavar='YYYY-MM-DD',
+                        help='example: 2017-12-05')
     args = parser.parse_args()
 
     if not (args.edge == 'likers' or args.edge == 'commentors'):

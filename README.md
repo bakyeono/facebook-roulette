@@ -33,7 +33,7 @@
 
 파이썬 3.6 이상의 인터프리터로 nominate.py 모듈을 실행한다. 실행 인자 지정 규칙은 다음과 같다.
 
-    python nominate.py [--duedate DUEDATE] edge post_id token
+    python nominate.py [--duedate YYYY-MM-DD] edge post_id token
 
 * ``edge``: (필수) 추출 후보군. 좋아요 한 사람(``likers``) 또는 댓글 단 사람(``commentors``)으로 지정
 * ``post_id``: (필수) 포스트의 ID

@@ -31,7 +31,7 @@
 
 ### 용도
 
-페이스북 포스트에서 좋아요 누른 사람 또는 댓글 단 사람을 추출해 낸다.
+페이스북 포스트에서 "좋아요" 누른 사람 또는 댓글 단 사람을 추출해 낸다.
 
 
 ### 용법
@@ -40,7 +40,7 @@
 
     python nominate.py [--duedate YYYY-MM-DD] edge post_id token
 
-* ``edge``: (필수) 추출 후보군. 좋아요 한 사람(``likers``) 또는 댓글 단 사람(``commentors``)으로 지정
+* ``edge``: (필수) 추출 후보군. "좋아요" 한 사람(``likers``) 또는 댓글 단 사람(``commentors``)으로 지정
 * ``post_id``: (필수) 포스트의 ID
 * ``token``: (필수) 그래프 API의 접근 토큰
 * ``--duedate``: (선택) 댓글 마감일. ISO 표준 형식으로 지정(예: ``2019-12-09``). 2019년 12월 9일로 지정했다면, 2019년 12월 8일 23시 59분의 댓글은 인정되나 2019년 12월 9일 0시 0분의 댓글은 인정되지 않는다.
@@ -48,7 +48,7 @@
 
 ### 용례
 
-"좋아요" 누른 사람 추출:
+"좋아요" 한 사람 추출:
 
     python nominate.py likers 1542798332469989 EAACEdEose0cBAAlGZBDoqfEMYTmzlsW7mJdzaSJMXdYFIQcjTpBZCafrB1nYMKjthoks7vNjj7K9mVk6BOrDfr2ObcZCfROzZC8k4DHipJG0WSdKTL403Bo1CAZBmxUI7465haf4VXdy3K2LPccniFLQtwVtvQbg8ScdhshqvyfA0Sy1WkHK9MZBcUl6DlNumoEhZBhkSZCQEAZDZD
 

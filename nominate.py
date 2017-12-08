@@ -31,7 +31,7 @@ def flatten(seq):
 
 
 def collect_pages(first_page):
-    """pagenated 된 데이터를 반복하여 읽어들인다."""
+    """paginate 된 데이터를 반복하여 읽어들인다."""
     pages = [first_page]
     next_page = first_page.get('paging', {}).get('next')
     while next_page:
